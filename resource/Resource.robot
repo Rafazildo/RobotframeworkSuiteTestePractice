@@ -108,7 +108,6 @@ Preencher formulário de registro
     ${DIA}                           Day Of Month
     ${MES}                           Month
     ${ANO}                           Year
-    ${Data}                          Da
 
     ${MESNASCIMENTO}=                Set Variable If    '${MES}' == '01'    1
                                      ...                '${MES}' == '02'    2
@@ -191,3 +190,7 @@ Preencher formulário de registro
     Select From List By Value        id=id_country                           ${ENDERECO.pais}
     Input Text                       id=phone_mobile                         ${ENDERECO.celular}
     Input Text                       id=alias                                ${ENDERECO.apelido}
+
+Clicar no botão Register
+    Click Element                    id=submitAccount
+    Wait Until Element Is Visible    //*[@id="columns"]/div[1]/span[2][contains(text(),"My account")]
