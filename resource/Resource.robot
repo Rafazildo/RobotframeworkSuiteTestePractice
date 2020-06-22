@@ -165,10 +165,6 @@ Preencher formulário de registro
     ${PHONENUMBER}                   Phone Number
     &{ENDERECO}=                     Create Dictionary    logradouro=${LOGRADOURO}    cidade=${CIDADE}    zipcode=${ZIPCODE}    celular=${PHONENUMBER}    estado=32    pais=21    apelido=Casa
 
-    # Não consegui setar os dicionários da forma que eu gostaria, se alguém souber como implementar o que eu tentei nas duas linhas abaixo, por favor me avise
-    # &{PESSOA}                        nome=FakerLibrary.First Name    sobrenome=FakerLibrary.Last Name    password=FakerLibrary.Password   diaNascimento=FakerLibrary.Day Of Month    mesNascimento=Month
-    # &{ENDERECO}                      logrador=FakerLibrary.Street Address    cidade=FakerLibrary.City    zipcode=FakerLibrary.Zipcode    celular=FakerLibrary.Phone Number
-
     Click Element                    id=id_gender1
     Input Text                       id=customer_firstname                   ${PESSOA.nome}
     Input Text                       id=customer_lastname                    ${PESSOA.sobrenome}
